@@ -1,0 +1,325 @@
+@charset "UTF-8";
+/* index.jsp */
+
+body{
+	font-family: '애플 SD 산돌고딕 Neo','Apple SD Gothic Neo',
+				'Helvetica Neue','Helvetica','나눔바른고딕',
+				'NanumBarunGothic','나눔바른고딕OTF','NanumBarunGothicOTF',
+				'Noto Sans','Noto+Sans','notokr-demilight','나눔고딕','NanumGothic',
+				'맑은 고딕','Malgun Gothic','sans-serif';
+	margin: 0;
+	padding: 0;
+}
+
+/*Header부분*/
+#main-header{
+	width: 100%;
+	position:fixed;
+	background-color:#fff;
+	opacity: 0.8;
+	border: thin solid #3b3b3b;
+}
+
+.header_menubar{
+	display: flex;
+	height:60px;
+	align-items: center;
+}
+
+.menu_logo{
+	padding-left:10px;	
+}
+
+#logo-link{
+	height :45px;
+}
+
+#logo-img{
+	height: 45px;
+	width: auto;
+}
+
+#menu-search{
+	border:0;
+	background-color:transparent;
+}
+
+#search-img{
+	height: 30px;
+	width: auto;
+	margin-right:20px;
+}
+
+#menu-button{
+	border:0;
+	background-color:transparent;
+}
+
+#menu-img{
+	height: 40px;
+	width:auto;
+	
+}
+
+#menu-empty{
+	width:88%
+}
+
+/*메인 페이지*/
+.main_top{
+	height: 120px;
+	border: thick solid #fc4f36;
+}
+/*추천책 란*/
+.recom_book{
+	height: 500px;
+	border: thick solid #fea73d;
+}
+#recom_book-cont{
+	height: 440px;
+	border:thick solid #fedeb4;
+	margin-top:50px;
+	overflow-x: auto;
+	overflow-y: hidden;
+	/*https://www.codingfactory.net/10599
+	  https://blog.jaeyoon.io/2017/10/css-scrollbar.html
+	   나중에 hidden처리*/
+}
+#recom_book-list{
+	list-style: none;
+	display:flex;
+	align-items: center;		/*상하정렬*/
+	justify-content: center;	/*좌우정렬*/
+	padding-left: 3500px ;
+}
+#recom_book-item{
+	border: medium solid #c0c0c0;
+	margin: 15px 30px;
+	box-shadow:3px 3px 3px #636569;
+}
+#recom_book-item .link_item{
+	text-decoration: none;
+}
+#recom_book-item-head{
+	color: black;
+
+}
+#book-item-head-inner{
+	height:360px;
+	width:270px;
+}
+
+#book-item-head-inner-cont{
+	text-align: center;
+}
+#book-item-head-inner-cont-top{
+	height: 220px;
+	padding-top:80px;
+}
+#book-item-head-inner-cont-bottom{
+	height: 40px;
+	padding-top:20px;
+}
+#book-item-head-inner strong{
+	display:block;
+}
+#book-item-head-inner span{
+	display: block;
+}
+
+/*공감글 란*/
+.recom_writting{
+	height: 600px;
+	border: thick solid #fea73d;
+}
+#recom_writting-cont{
+	height: 540px;
+	border:thick solid #fedeb4;
+	margin-top:50px;
+	overflow-x: auto;
+	overflow-y: hidden;
+	/*https://www.codingfactory.net/10599
+	  https://blog.jaeyoon.io/2017/10/css-scrollbar.html
+	   나중에 hidden처리*/
+}
+#recom_writting-list{
+	list-style: none;
+	display:flex;
+	align-items: center;		/*상하정렬*/
+	justify-content: center;	/*좌우정렬*/
+	padding-left: 3500px ;
+}
+#recom_writting-item{
+	border: medium solid #c0c0c0;
+	margin: 15px 30px;
+	box-shadow:3px 3px 3px #636569;
+}
+#recom_writting-item .link_item{
+	text-decoration: none;
+}
+#recom_writting-item-head{
+	color: black;
+
+}
+#writting-item-head-inner{
+	height:430px;
+	width:270px;
+}
+
+#writting-item-head-inner-cont{
+	text-align: center;
+}
+#writting-item-head-inner-cont-img{
+	height: 238px;
+	margin: 15px;
+	background-image:url(../img/a.jpg);
+	border:1px solid #c0c0c0;
+}
+#writting-item-head-inner-cont-hs{
+	height:140px;
+}
+#writting-item-head-inner-cont-head{
+	max-height: 64px;
+	padding:0 20px;
+}
+#writting-item-head-inner-cont-sub{
+	max-height: 64px;
+	max-width: 240px;
+	padding:0 20px;
+	margin-top:10px;
+}
+#writting-item-head-inner-cont-bottom{
+	height: 30px;
+}
+#writting-item-head-inner-cont-head p{
+	display:inline-block;
+	margin:0;
+	max-height: 64px;
+	font-family: 'AppleSDGothicNeoEB00','sans-serif';
+	font-size: 20px;
+	word-wrap: break-word;	
+}
+#writting-item-head-inner-cont-sub span{
+	display:inline-block;
+	margin:0;
+	max-height: 64px;
+	max-width: 240px;
+	font-size: 18px;
+	font-family: 'AppleSDGothicNeoM00','sans-serif';
+	overflow:hidden;
+	white-space: normal;
+	text-overflow: ellipsis;
+}/* 문자수를 제한해서 소제목을 보여줄 것*/
+#writting-item-head-inner span{
+	display: block;
+	font-size: 14px;
+	font-family: 'AppleSDGothicNeoM00','sans-serif';
+}
+
+/* 추천 작가 란 */
+.recom_writer{
+	height: 500px;
+	border: thick solid #96f52c;
+}
+/* 최신 글 란 */
+.recent_writting{
+	min-height:600px;
+	border: thick solid #70fee9;
+}
+#recent_writting-cont{
+	height: 540px;
+	border:thick solid #fedeb4;
+	margin-top:50px;
+	overflow-x: auto;
+	overflow-y: hidden;
+	/*https://www.codingfactory.net/10599
+	  https://blog.jaeyoon.io/2017/10/css-scrollbar.html
+	   나중에 hidden처리*/
+}
+#recent_writting-list{
+	list-style: none;
+	display:flex;
+	align-items: center;		/*상하정렬*/
+	justify-content: center;	/*좌우정렬*/
+	padding-left: 3500px ;
+}
+#recent_writting-item{
+	border: medium solid #c0c0c0;
+	margin: 15px 30px;
+	box-shadow:3px 3px 3px #636569;
+}
+#recent_writting-item .link_item{
+	text-decoration: none;
+}
+#recent_writting-item-head{
+	color: black;
+
+}
+#recent_writting-item-head-inner{
+	height:430px;
+	width:270px;
+}
+
+#recent_writting-item-head-inner-cont{
+	text-align: center;
+}
+#recent_writting-item-head-inner-cont-img{
+	height: 238px;
+	margin: 15px;
+	background-image:url(../img/a.jpg);
+	border:1px solid #c0c0c0;
+}
+#recent_writting-item-head-inner-cont-hs{
+	height:140px;
+}
+#recent_writting-item-head-inner-cont-head{
+	max-height: 64px;
+	padding:0 20px;
+}
+#recent_writting-item-head-inner-cont-sub{
+	max-height: 64px;
+	max-width: 240px;
+	padding:0 20px;
+	margin-top:10px;
+}
+#recent_writting-item-head-inner-cont-bottom{
+	height: 30px;
+}
+#recent_writting-item-head-inner-cont-head p{
+	display:inline-block;
+	margin:0;
+	max-height: 64px;
+	font-family: 'AppleSDGothicNeoEB00','sans-serif';
+	font-size: 20px;
+	word-wrap: break-word;	
+}
+#recent_writting-item-head-inner-cont-sub span{
+	display:inline-block;
+	margin:0;
+	max-height: 64px;
+	max-width: 240px;
+	font-size: 18px;
+	font-family: 'AppleSDGothicNeoM00','sans-serif';
+	overflow:hidden;
+	white-space: normal;
+	text-overflow: ellipsis;
+}/* 문자수를 제한해서 소제목을 보여줄 것*/
+#recent_writting-item-head-inner span{
+	display: block;
+	font-size: 14px;
+	font-family: 'AppleSDGothicNeoM00','sans-serif';
+}
+/* footer 정보란*/
+#main-footer{
+	height: 100px;
+	border: thick solid #7caafe;
+}
+
+
+
+
+
+
+
+
+
