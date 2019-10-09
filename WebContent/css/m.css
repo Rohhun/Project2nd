@@ -1,0 +1,440 @@
+@charset "UTF-8";
+/* index.jsp */
+
+body{
+	font-family: '애플 SD 산돌고딕 Neo','Apple SD Gothic Neo',
+				'Helvetica Neue','Helvetica','나눔바른고딕',
+				'NanumBarunGothic','나눔바른고딕OTF','NanumBarunGothicOTF',
+				'Noto Sans','Noto+Sans','notokr-demilight','나눔고딕','NanumGothic',
+				'맑은 고딕','Malgun Gothic','sans-serif';
+	margin: 0;
+	padding: 0;
+}
+.clear{
+	clear:both;	
+}
+
+/*Header부분*/
+#main-header{
+	width: 100%;
+	position:fixed;
+	background-color:#fff;
+	opacity: 0.8;
+	border: thin solid #3b3b3b;
+	z-index: 1;
+}
+
+#header_menubar{
+	display: flex;
+	height:60px;
+	align-items: center;
+}
+
+#menu_logo{
+	padding-left:10px;	
+}
+
+#logo-link{
+	height :45px;
+}
+
+#logo-img{
+	margin-left:20px;
+	height: 45px;
+	width: auto;
+}
+
+#menu_search-button{
+	border:0;
+	background-color:transparent;
+}
+
+#search-img{
+	height: 30px;
+	width: auto;
+	margin-right:20px;
+}
+
+#menu-button{
+	border:0;
+	background-color:transparent;
+}
+
+#menu-img{
+	height: 40px;
+	width:auto;
+	
+}
+
+#menu-empty{
+	width:87%
+}
+
+/*우측 사이드 메뉴창 */
+#menu_page{
+	visibility:hidden;	
+}
+
+/*메인 페이지*/
+#main_top{
+	height: 120px;
+	border: thick solid #fc4f36; 
+}
+/*추천책 란*/
+#recom_book{
+	height: 500px;
+	border: thick solid #fea73d;
+}
+#recom_book-cont{
+	height: 440px;
+	border:thick solid #fedeb4;
+	margin-top:50px;
+	overflow-x: auto;
+	overflow-y: hidden;
+	/*https://www.codingfactory.net/10599
+	  https://blog.jaeyoon.io/2017/10/css-scrollbar.html
+	   나중에 hidden처리*/
+	-ms-overflow-style: none; /*IE에서 스크롤바 감춤 */	
+}
+#recom_book-cont::-webkit-scrollbar { 
+    display: none !important; 윈도우 크롬 등
+} 
+#recom_book-list{
+	list-style: none;
+	display:flex;
+	align-items: center;		/*상하정렬*/
+	justify-content: center;	/*좌우정렬*/
+	padding-left: 3640px ;
+}
+
+.recom_book-item{
+	border: medium solid #c0c0c0;
+	margin: 15px 30px;
+	box-shadow:3px 3px 3px #636569;
+}
+.recom_book-item .link_item{
+	text-decoration: none;
+}
+.recom_book-item-head{
+	color: black;
+
+}
+.book-item-head-inner{
+	height:360px;
+	width:270px;
+}
+
+.book-item-head-inner-cont{
+	text-align: center;
+}
+.book-item-head-inner-cont-top{
+	height: 220px;
+	padding-top:80px;
+}
+.book-item-head-inner-cont-bottom{
+	height: 40px;
+	padding-top:20px;
+}
+.book-item-head-inner strong{
+	display:block;
+}
+.book-item-head-inner span{
+	display: block;
+}
+
+/*공감글 란*/
+#recom_writting{
+	height: 600px;
+	border: thick solid #fea73d;
+}
+#recom_writting-cont{
+	height: 540px;
+	border:thick solid #fedeb4;
+	margin-top:50px;
+	overflow-x: auto;
+	overflow-y: hidden;
+	-ms-overflow-style: none; /* IE에서 스크롤바 감춤 */
+}
+#recom_writting-cont::-webkit-scrollbar { 
+    display: none !important; /* 윈도우 크롬 등 */
+}
+#recom_writting-list{
+	list-style: none;
+	display:flex;
+	align-items: center;		/*상하정렬*/
+	justify-content: center;	/*좌우정렬*/
+	padding-left: 3640px;		
+}
+
+.recom_writting-item{
+	border: medium solid #c0c0c0;
+	margin: 15px 30px;
+	box-shadow:3px 3px 3px #636569;
+}
+.recom_writting-item .link_item{
+	text-decoration: none;
+}
+.recom_writting-item-head{
+	color: black;
+
+}
+.writting-item-head-inner{
+	height:430px;
+	width:270px;
+}
+
+.writting-item-head-inner-cont{
+	text-align: center;
+}
+.writting-item-head-inner-cont-img{
+	height: 238px;
+	margin: 15px;
+	background-image:url(../img/a.jpg);
+	border:1px solid #c0c0c0;
+}
+.writting-item-head-inner-cont-hs{
+	height:140px;
+}
+.writting-item-head-inner-cont-head{
+	max-height: 64px;
+	padding:0 20px;
+}
+.writting-item-head-inner-cont-sub{
+	max-height: 64px;
+	max-width: 240px;
+	padding:0 20px;
+	margin-top:10px;
+}
+.writting-item-head-inner-cont-bottom{
+	height: 30px;
+}
+.writting-item-head-inner-cont-head p{
+	display:inline-block;
+	margin:0;
+	max-height: 64px;
+	font-family: 'AppleSDGothicNeoEB00','sans-serif';
+	font-size: 20px;
+	word-wrap: break-word;	
+}
+.writting-item-head-inner-cont-sub span{
+	display:inline-block;
+	margin:0;
+	max-height: 64px;
+	max-width: 240px;
+	font-size: 18px;
+	font-family: 'AppleSDGothicNeoM00','sans-serif';
+	overflow:hidden;
+	white-space: normal;
+	text-overflow: ellipsis;
+}/* 문자수를 제한해서 소제목을 보여줄 것*/
+.writting-item-head-inner span{
+	display: block;
+	font-size: 14px;
+	font-family: 'AppleSDGothicNeoM00','sans-serif';
+}
+
+/* 추천 작가 란 */
+#recom_writer{
+	height: 930px;
+	border: thick solid #96f52c;
+}
+#recom_writer-cont{
+	height: 870px;
+	border:thick solid #97fd8e;
+	margin-top:50px;
+	overflow: hidden;	/*내용물이 화면에서 넘치면 숨김*/
+}
+#recom_writer-list{
+	display: flex;		/*flowlayout처럼 처리*/
+	flex-wrap: wrap;	/*flex로 지정된 컴포넌트들이 div범위를 벗어날때 하단으로 정렬되도록*/
+	width: 1200px;		/*전체 화면크기의 90%*/
+	margin: 0 auto;		/*좌우 margin auto*/		
+	list-style: none;	/*list style 지움*/
+	padding-bottom: 60px;
+}
+.recom_writer-item{
+	position: relative;	/*li사이즈를 고정(내부 내용이 커저도 영향 없음)*/
+	width: 300px;		/*육각형의 가로길이 지정*/
+}
+
+.recom_writer-item::after{ /*http://blog.hivelab.co.kr/%EA%B3%B5%EC%9C%A0before%EC%99%80after-%EA%B7%B8%EB%93%A4%EC%9D%98-%EC%A0%95%EC%B2%B4%EB%8A%94/*/
+	/*요소의 콘텐츠 끝부분에 똑같은 콘텐츠 추가(가상) : 여기선 li요소 추가*/
+	content:'';		/*내용이 있어야 육각형끼리 겹쳐지지 않음*/
+	display:block;	
+	padding-bottom: 86.602%;  /* =  100 / tan(60) (0.32004038938)  * 1.5 */
+}
+
+.recom_writer-item:nth-child(5){ /*nth-child(숫자) : 앞에서부터 숫자번째 요소 지정*/
+    margin-left:12.6%;  /* 5번째 요소의 좌측 margin(열맞추기위한 margin) */
+  }
+
+.recom_writer-item-inner{
+	position: absolute;		/*li내부에 div 위치 고정(다른요소에 밀리지않게)*/
+	width:96%;				/*동전복권 긁듯이  padding과 margin으로 사이즈 키우고 아래서 회전 및 기울임*/
+	padding-bottom: 110.851%; /* =  width / sin(60) (-0.3048106211) */
+	margin:0 2%;
+	overflow: hidden;		/*li내부 범위보다 넘어가면 잘림(육각모형으로)*/
+	visibility: hidden;		/*div범위를 보여주지 않음(차후 내부내용들을 visible처리하여 내용만보여줌)*/
+	-webkit-transform: rotate3d(0,0,1,-60deg) skewY(30deg);	/*꼭지점 효과를 위해 직사각형을 마름모 꼴로 만드는 */
+		-ms-transform: rotate3d(0,0,1,-60deg) skewY(30deg); /*회전 및 기울임*/
+			transform: rotate3d(0,0,1,-60deg) skewY(30deg);
+}
+.recom_writer-item-inner *{/* *표시는 '하위 모두' 표시 */
+	position: absolute;		/*div내부 내용들을 고정시킴*/
+	visibility: visible;	/*div내부 내용들을 보여줌*/
+}
+
+.recom_writer-item-link {
+    display:block;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    color: #fff;
+    overflow: hidden;
+    -webkit-transform: skewY(-30deg) rotate3d(0,0,1,60deg);	/*div설정에서 회전 및 기울였던 것을 원상복구*/
+        -ms-transform: skewY(-30deg) rotate3d(0,0,1,60deg);
+            transform: skewY(-30deg) rotate3d(0,0,1,60deg);
+}
+
+.recom_writer-item-link img{
+	left: -100%;	/*absolute 상태에서 좌우에 100%씩*/
+	right: -100%;	/*밀어내서 중앙정렬하는 역할*/
+	width: auto;	/*anchor(a)에 너비 맞춤*/
+	height: 100%;	/*높이 비율에 맞게 자동 설정*/
+	margin: 0 auto;	/*left,right 밀린만큼 margin*/
+}
+
+/* 최신 글 란 */
+#recent_writting{
+	height:600px;
+	border: thick solid #70fee9;
+}
+#recent_writting-cont{
+	height: 540px;
+	border:thick solid #b1fefc;
+	margin-top:50px;
+	overflow-x: auto;
+	overflow-y: hidden;
+	-ms-overflow-style: none; /* IE에서 스크롤바 감춤 */	
+}
+#recent_writting-cont::-webkit-scrollbar { 
+    display: none !important; /* 윈도우 크롬 등 */
+}
+#recent_writting-list{
+	list-style: none;
+	display:flex;
+	align-items: center;		/*상하정렬*/
+	justify-content: center;	/*좌우정렬*/
+	padding-left: 3640px ;
+}
+.recent_writting-item{
+	border: medium solid #c0c0c0;
+	margin: 15px 30px;
+	box-shadow:3px 3px 3px #636569;
+}
+.recent_writting-item .link_item{
+	text-decoration: none;
+}
+.recent_writting-item-head{
+	color: black;
+
+}
+.recent_writting-item-head-inner{
+	height:430px;
+	width:270px;
+}
+
+.recent_writting-item-head-inner-cont{
+	text-align: center;
+}
+.recent_writting-item-head-inner-cont-img{
+	height: 238px;
+	margin: 15px;
+	background-image:url(../img/a.jpg);
+	border:1px solid #c0c0c0;
+}
+.recent_writting-item-head-inner-cont-hs{
+	height:140px;
+}
+.recent_writting-item-head-inner-cont-head{
+	max-height: 64px;
+	padding:0 20px;
+}
+.recent_writting-item-head-inner-cont-sub{
+	max-height: 64px;
+	max-width: 240px;
+	padding:0 20px;
+	margin-top:10px;
+}
+.recent_writting-item-head-inner-cont-bottom{
+	height: 30px;
+}
+.recent_writting-item-head-inner-cont-head p{
+	display:inline-block;
+	margin:0;
+	max-height: 64px;
+	font-family: 'AppleSDGothicNeoEB00','sans-serif';
+	font-size: 20px;
+	word-wrap: break-word;	
+}
+.recent_writting-item-head-inner-cont-sub span{
+	display:inline-block;
+	margin:0;
+	max-height: 64px;
+	max-width: 240px;
+	font-size: 18px;
+	font-family: 'AppleSDGothicNeoM00','sans-serif';
+	overflow:hidden;
+	white-space: normal;
+	text-overflow: ellipsis;
+}/* 문자수를 제한해서 소제목을 보여줄 것*/
+.recent_writting-item-head-inner span{
+	display: block;
+	font-size: 14px;
+	font-family: 'AppleSDGothicNeoM00','sans-serif';
+}
+/* footer 정보란*/
+#main-footer{
+	height: 100px;
+	border: thick solid #7caafe;
+}
+
+
+/*좌우 스크롤 버튼 설정*/
+.slide-button{
+	width:96%;	/*바깥 div크기만큼의 너비*/
+	height:0;	/*직접적으로 div가 보이진 않음*/
+	position:relative;	
+	bottom:50%;
+	display:flex;
+	justify-content: space-between;
+	align-items: center;
+	padding-left:2%;
+	opacity: 0.6;
+}
+recent_writting-cont-slideleft .slide-button{
+	
+}
+
+.slide-left, .slide-right{	
+	background-color:#ffffac;
+	border-radius: 50%;
+	width:100px;
+	height:100px;
+	justify-content:center;
+	align-items: center;
+}
+.slide-button .slide-left img{
+	width:80px;
+	height:80px;
+	margin:10px 10px 10px 0px;
+}
+.slide-button .slide-right img{
+	width:80px;
+	height:80px;
+	margin:10px 0px 10px 20px;
+}
+
+
+
+
