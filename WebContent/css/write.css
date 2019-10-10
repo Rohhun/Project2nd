@@ -1,0 +1,22 @@
+@charset "UTF-8";
+#write_title{
+	border:1px solid red;
+}
+#title_parent{
+	text-align:center;
+}
+.title{
+	border:1px solid grey;
+	width:50%;
+	margin:0 auto;
+}
+.cont_area{
+	border:1px solid blue;
+	margin:0px 350px;
+	padding:50px 0px;
+}
+
+
+
+
+
