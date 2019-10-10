@@ -163,7 +163,7 @@ body{
 	display:flex;
 	align-items: center;		/*상하정렬*/
 	justify-content: center;	/*좌우정렬*/
-	padding-left: 3640px;		
+	padding-left: 3945px;		
 }
 
 .recom_writting-item{
@@ -180,7 +180,7 @@ body{
 }
 .writting-item-head-inner{
 	height:430px;
-	width:270px;
+	width:300px;
 }
 
 .writting-item-head-inner-cont{
