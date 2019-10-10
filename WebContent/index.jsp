@@ -44,6 +44,8 @@
   
   </div>
   
+  <div class="clear"></div>
+  
   <%-- 메인페이지 --%>
   <div id="main_cont"> 
    
