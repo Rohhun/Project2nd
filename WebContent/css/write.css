@@ -1,19 +1,33 @@
 @charset "UTF-8";
 #write_title{
 	border:1px solid red;
+	position:relative;
 }
 #title_parent{
-	text-align:center;
+	text-align:left;
+	position:absolute;
+	bottom:0px;
+	width:700px
+}
+#main_title{
+	float:left;
+}
+#sub_title{
+	float:left;
+}
+#sub_title_cover{
+	position:inline-block;
 }
 .title{
 	border:1px solid grey;
-	width:50%;
 	margin:0 auto;
 }
 .cont_area{
+	width:700px;
 	border:1px solid blue;
-	margin:0px 350px;
-	padding:50px 0px;
+	margin:0px auto;
+	position:relative;
+	padding:40px 0px;
 }
 
 
