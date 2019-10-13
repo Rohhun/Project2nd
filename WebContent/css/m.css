@@ -21,7 +21,7 @@ body{
 	background-color:#fff;
 	opacity: 0.8;
 	border: thin solid #3b3b3b;
-	z-index: 1;
+	z-index: 10020;
 }
 
 #header_menubar{
@@ -72,9 +72,59 @@ body{
 
 /*우측 사이드 메뉴창 */
 #menu_page{
-	visibility:hidden;	
+	position:fixed;
+	top:60px;
+	width:100%;
+	height: calc(100vh - 60px);
+	visibility:hidden;
+	z-index:10000;	
+	background-color: #000000;
+	opacity: 0.7;	
 }
-
+#menu-page-wrap{
+	height:500px;
+	border:1px solid #c0c0c0;
+	background-color: #fff;
+	opacity: 0.9;
+	display:flex;
+}
+/*우측사이드창 - wrap*/
+#page-besthot-wrap{
+	width:calc(43.24vw - 130px);
+	min-width:318px;
+	border:1px solid #ff8040;
+}
+#page-category-wrap{
+	width:calc(56.76vw - 130px);
+	min-width:418px;
+	border:1px solid #ff0080;
+}
+#page-profile-wrap{
+	width:258px;
+	min-width:258px;
+	border:1px solid #0000ff;
+}
+/*우측사이드창 - profile*/
+#page-profile-wrap .profile-menu{
+	border: 1px solid black;
+	width: 246px;
+	height: 48px;
+	display:flex;
+	justify-content: space-between;
+	align-items: center;
+	padding:0 5px;
+}
+.profile-menu .feed-button img{
+	width:20px;
+}
+.profile-menu .close-button{
+	border:0;
+	background-color:transparent;
+	padding:0;
+}
+.profile-menu .close-button img{
+	width:20px;
+}
 /*메인 페이지*/
 #main_top{
 	height: 120px;
@@ -97,7 +147,7 @@ body{
 	-ms-overflow-style: none; /*IE에서 스크롤바 감춤 */	
 }
 #recom_book-cont::-webkit-scrollbar { 
-    display: none !important; 윈도우 크롬 등
+    display: none !important; /* 윈도우 크롬 등*/
 } 
 #recom_book-list{
 	list-style: none;
@@ -163,7 +213,7 @@ body{
 	display:flex;
 	align-items: center;		/*상하정렬*/
 	justify-content: center;	/*좌우정렬*/
-	padding-left: 3945px;		
+	padding-left: 4445px;		
 }
 
 .recom_writting-item{
@@ -180,7 +230,7 @@ body{
 }
 .writting-item-head-inner{
 	height:430px;
-	width:300px;
+	width:350px;
 }
 
 .writting-item-head-inner-cont{
@@ -200,10 +250,10 @@ body{
 	padding:0 20px;
 }
 .writting-item-head-inner-cont-sub{
-	max-height: 64px;
-	max-width: 240px;
+	max-height: 100px;
 	padding:0 20px;
 	margin-top:10px;
+	item-align:center;
 }
 .writting-item-head-inner-cont-bottom{
 	height: 30px;
@@ -219,13 +269,13 @@ body{
 .writting-item-head-inner-cont-sub span{
 	display:inline-block;
 	margin:0;
-	max-height: 64px;
-	max-width: 240px;
+	max-height: 100px;
 	font-size: 18px;
 	font-family: 'AppleSDGothicNeoM00','sans-serif';
-	overflow:hidden;
-	white-space: normal;
-	text-overflow: ellipsis;
+	overflow: hidden;		/*내용이 넘어가면 숨김*/
+	white-space: normal;	/*줄바꿈 처리 : width넘어가면 엔터처리*/ 
+	word-wrap: break-word;	/*엔터처리시에 단어단위로 끊어서 사용-현재적용안됨..*/
+	text-overflow: ellipsis;/*문자 over되는거 ...처리*/
 }/* 문자수를 제한해서 소제목을 보여줄 것*/
 .writting-item-head-inner span{
 	display: block;
@@ -235,73 +285,96 @@ body{
 
 /* 추천 작가 란 */
 #recom_writer{
-	height: 930px;
+	height: 490px;
 	border: thick solid #96f52c;
+	display:flex;
+	justify-content:center;
 }
 #recom_writer-cont{
-	height: 870px;
+	height: 430px;
+	width: 940px;
+	min-width: 940px;
 	border:thick solid #97fd8e;
 	margin-top:50px;
-	overflow: hidden;	/*내용물이 화면에서 넘치면 숨김*/
 }
 #recom_writer-list{
-	display: flex;		/*flowlayout처럼 처리*/
-	flex-wrap: wrap;	/*flex로 지정된 컴포넌트들이 div범위를 벗어날때 하단으로 정렬되도록*/
-	width: 1200px;		/*전체 화면크기의 90%*/
-	margin: 0 auto;		/*좌우 margin auto*/		
-	list-style: none;	/*list style 지움*/
-	padding-bottom: 60px;
+	list-style: none;
+	display:flex;
+	flex-wrap:wrap;
+	justify-content: center;
+	padding-left:0;
 }
 .recom_writer-item{
-	position: relative;	/*li사이즈를 고정(내부 내용이 커저도 영향 없음)*/
-	width: 300px;		/*육각형의 가로길이 지정*/
+	border:1px solid #c0c0c0;
+	margin:10px 10px;
 }
-
-.recom_writer-item::after{ /*http://blog.hivelab.co.kr/%EA%B3%B5%EC%9C%A0before%EC%99%80after-%EA%B7%B8%EB%93%A4%EC%9D%98-%EC%A0%95%EC%B2%B4%EB%8A%94/*/
-	/*요소의 콘텐츠 끝부분에 똑같은 콘텐츠 추가(가상) : 여기선 li요소 추가*/
-	content:'';		/*내용이 있어야 육각형끼리 겹쳐지지 않음*/
-	display:block;	
-	padding-bottom: 86.602%;  /* =  100 / tan(60) (0.32004038938)  * 1.5 */
-}
-
-.recom_writer-item:nth-child(5){ /*nth-child(숫자) : 앞에서부터 숫자번째 요소 지정*/
-    margin-left:12.6%;  /* 5번째 요소의 좌측 margin(열맞추기위한 margin) */
-  }
-
 .recom_writer-item-inner{
-	position: absolute;		/*li내부에 div 위치 고정(다른요소에 밀리지않게)*/
-	width:96%;				/*동전복권 긁듯이  padding과 margin으로 사이즈 키우고 아래서 회전 및 기울임*/
-	padding-bottom: 110.851%; /* =  width / sin(60) (-0.3048106211) */
-	margin:0 2%;
-	overflow: hidden;		/*li내부 범위보다 넘어가면 잘림(육각모형으로)*/
-	visibility: hidden;		/*div범위를 보여주지 않음(차후 내부내용들을 visible처리하여 내용만보여줌)*/
-	-webkit-transform: rotate3d(0,0,1,-60deg) skewY(30deg);	/*꼭지점 효과를 위해 직사각형을 마름모 꼴로 만드는 */
-		-ms-transform: rotate3d(0,0,1,-60deg) skewY(30deg); /*회전 및 기울임*/
-			transform: rotate3d(0,0,1,-60deg) skewY(30deg);
+	width:280px;
+	height:170px;
 }
-.recom_writer-item-inner *{/* *표시는 '하위 모두' 표시 */
-	position: absolute;		/*div내부 내용들을 고정시킴*/
-	visibility: visible;	/*div내부 내용들을 보여줌*/
-}
-
 .recom_writer-item-link {
-    display:block;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    color: #fff;
-    overflow: hidden;
-    -webkit-transform: skewY(-30deg) rotate3d(0,0,1,60deg);	/*div설정에서 회전 및 기울였던 것을 원상복구*/
-        -ms-transform: skewY(-30deg) rotate3d(0,0,1,60deg);
-            transform: skewY(-30deg) rotate3d(0,0,1,60deg);
+	text-decoration:none;
+	display:flex;
+	height:130px;
+}
+.recom_writer-item-img{
+	height:90px; 
+	width:90px;
+	display:inline-block;
+	margin:10px;
+}
+.recom_writer-item-img img{
+	height:90px;
+	width:90px;
+	object-fit: cover;
+	border-radius: 50%;
 }
 
-.recom_writer-item-link img{
-	left: -100%;	/*absolute 상태에서 좌우에 100%씩*/
-	right: -100%;	/*밀어내서 중앙정렬하는 역할*/
-	width: auto;	/*anchor(a)에 너비 맞춤*/
-	height: 100%;	/*높이 비율에 맞게 자동 설정*/
-	margin: 0 auto;	/*left,right 밀린만큼 margin*/
+.recom_writer-item-intro{
+	margin-right:10px;
+}
+.recom_writer-item-intro strong{
+	font-size:14px;
+	color:#b8b8b8;
+	display:block;
+	margin-top:10px;
+}
+.writer-job{
+	font-size:14px;
+	color:#b8b8b8;
+	display:block;
+	margin-top:5px;
+}
+.writer-intro{
+	font-size:14px;
+	color:#b8b8b8;
+	overflow: hidden;		/*내용이 넘어가면 숨김*/
+	white-space: normal;	/*줄바꿈 처리 : width넘어가면 엔터처리*/ 
+	word-wrap: break-word;	/*엔터처리시에 단어단위로 끊어서 사용.*/
+	text-overflow: ellipsis;/*문자 over되는거 ...처리*/
+	display: -webkit-box; 
+	-webkit-line-clamp: 4; /* 라인수 */ 
+	-webkit-box-orient: vertical;
+	line-height: 1.2em; 
+	height: 4.7em; 
+	/* line-height 가 1.2em 이고 4라인을 자르기 때문에 height는 
+		1.2em * 4 = 4.8em ....아래가 조금 보여서 4.7로 줄임*/
+	margin-top:10px;	
+
+}
+.recom_writer-keyword{
+	display:flex;
+	justify-content: flex-end;
+	height:40px;
+	margin-right:5px;
+	
+}
+.recom_writer-keyword button{
+	background-color:transparent;
+    border:1px solid #c0c0c0; 
+    border-radius: 20px;
+    color:#c0c0c0;
+    margin:6px 2px;
 }
 
 /* 최신 글 란 */
@@ -325,7 +398,7 @@ body{
 	display:flex;
 	align-items: center;		/*상하정렬*/
 	justify-content: center;	/*좌우정렬*/
-	padding-left: 3640px ;
+	padding-left: 4445px;
 }
 .recent_writting-item{
 	border: medium solid #c0c0c0;
@@ -341,7 +414,7 @@ body{
 }
 .recent_writting-item-head-inner{
 	height:430px;
-	width:270px;
+	width:350px;
 }
 
 .recent_writting-item-head-inner-cont{
@@ -361,8 +434,7 @@ body{
 	padding:0 20px;
 }
 .recent_writting-item-head-inner-cont-sub{
-	max-height: 64px;
-	max-width: 240px;
+	max-height: 100px;
 	padding:0 20px;
 	margin-top:10px;
 }
@@ -380,12 +452,12 @@ body{
 .recent_writting-item-head-inner-cont-sub span{
 	display:inline-block;
 	margin:0;
-	max-height: 64px;
-	max-width: 240px;
+	max-height: 100px;
 	font-size: 18px;
 	font-family: 'AppleSDGothicNeoM00','sans-serif';
 	overflow:hidden;
 	white-space: normal;
+	word-wrap: break-word;
 	text-overflow: ellipsis;
 }/* 문자수를 제한해서 소제목을 보여줄 것*/
 .recent_writting-item-head-inner span{
