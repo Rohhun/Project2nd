@@ -37,7 +37,13 @@ function scrollmove(whereScroll,howMove){
 	}, 30);
 }
 
+function menuopen(){
+	$('#menu_page').css('visibility','visible');
+}
 
+function menuclose(){
+	$('#menu_page').css('visibility','hidden');
+}
 
 
 
