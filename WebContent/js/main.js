@@ -39,6 +39,7 @@ function scrollmove(whereScroll,howMove){
 
 function menuopen(){
 	$('#menu_page').css('visibility','visible');
+	/*jquery를 이용한 css 변경*/
 }
 
 function menuclose(){
