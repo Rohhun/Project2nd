@@ -1,35 +1,26 @@
 @charset "UTF-8";
 #write_title{
 	border:1px solid red;
+	position:relative;
 }
 #title_parent{
-	float:left;
-	width:700px;
-	transform: translate(50%,50%);
+	text-align:left;
+	position:absolute;
+	bottom:0px;
+	width:700px
 }
 #main_title{
-	padding:0px 0px;
-	margin:0px 0px;
-}
-#main_title:empty::before{
-	content:"메인타이틀";
-	font-size: 38pt;
-	font-family: "Nanum Myeongjo";
-	cursor: text;
-	opacity:0.6;
+	float:left;
 }
 #sub_title{
-	padding-top:5px;
-	display:inline-block;
-	max-width:700px;
-	min-width:100px;
+	float:left;
 }
-#sub_title:empty::before{
-	content:"서브타이틀";
-	font-size:38pt
-	font-family:"NanumMyeongjo";
-	corsor:text;
-	opacity:0.6;
+#sub_title_cover{
+	position:inline-block;
+}
+.title{
+	border:1px solid grey;
+	margin:0 auto;
 }
 .cont_area{
 	width:700px;
