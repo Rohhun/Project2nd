@@ -1,0 +1,60 @@
+@charset "UTF-8";
+
+@charset "UTF-8";
+
+#main{
+	border:solid 3px gray;
+	width: 940px;
+	height: 500px;
+	margin: 7% auto;
+	text-align: center;
+}
+
+#logo{
+	border:solid 3px green;
+	width: 400px;
+	height: 80px;
+	font-family: '애플 SD 산돌고딕 Neo','Apple SD Gothic Neo',
+				'Helvetica Neue','Helvetica','나눔바른고딕',
+				'NanumBarunGothic','나눔바른고딕OTF','NanumBarunGothicOTF',
+				'Noto Sans','Noto+Sans','notokr-demilight','나눔고딕','NanumGothic',
+				'맑은 고딕','Malgun Gothic','sans-serif';
+	font-size:4rem;
+	text-align: center;	
+	line-height: 80px;
+	margin: 50px auto;
+}
+#mid{
+	text-align: center;
+}
+#id{
+	width: 300px;
+	height: 30px;
+	font-size:20px;
+	margin-bottom: 30px;
+
+}
+#pass{
+	width: 300px;
+	height: 30px;
+	font-size:20px;
+	margin-bottom: 30px;
+}
+
+#btn{
+	margin-top: 20px;
+	border: solid 2px gray;
+	width: 200px;
+	height: 45px;
+	background-color: white;
+}
+
+#bottom{
+	margin-top: 30px;
+		
+}
+a:link {
+	text-decoration: none; color: gray;
+	margin: 0px 70px;	
+}
+

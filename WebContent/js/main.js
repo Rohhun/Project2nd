@@ -37,7 +37,14 @@ function scrollmove(whereScroll,howMove){
 	}, 30);
 }
 
+function menuopen(){
+	$('#menu_page').css('visibility','visible');
+	/*jquery를 이용한 css 변경*/
+}
 
+function menuclose(){
+	$('#menu_page').css('visibility','hidden');
+}
 
 
 

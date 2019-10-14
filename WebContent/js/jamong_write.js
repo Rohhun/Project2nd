@@ -1,0 +1,5 @@
+/**
+ *  jamong_write.js
+ */
+
+
