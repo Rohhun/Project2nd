@@ -39,12 +39,45 @@
   </header>
   
   <div class="clear"></div>
-  
+   
   <%-- 우측 사이드 메뉴창 --%>
   <div id="menu_page">
    <div id="menu-page-wrap">
     <div id="page-besthot-wrap">
-    
+     <div id="page-best">
+      <div id="page-best-title">
+       <strong>Best</strong>
+      </div>
+      
+       <ul id="page-best-list">
+<%
+	 	for(int i=1;i<=5;i++){
+%>			
+	    <li class="page-best-item">
+	     <a href="#" class="page-best-link">
+	      <%if(i%2==1){%>
+	      <img src="./img/a.jpg"/>
+	      <%}else {%>
+	      <img src="./img/b.jpg"/>
+	      <%}%>
+	      <div class="page-best-cont">	      
+	        <strong class="page-main-title">죽어도 못보냈다.</strong>	     	      
+	        <span class="page-sub-title">경력 10년차에 퇴사하고 캐나다로 떠난 여행</span>	     	    
+	        <span class="page-writer"></span>
+	      </div>
+	     </a>
+	    </li>
+<% 			
+	 	}
+%>
+	   </ul>
+	  
+     </div>
+     <div id="page-hot">
+      <div id="page-hot-title">
+       <strong>Hot</strong>
+      </div>
+     </div>
     </div>
     <div id="page-category-wrap">
     

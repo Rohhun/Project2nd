@@ -19,7 +19,7 @@
    
   	<%-- 헤드-로고 --%>
  	<div id="menu_logo">
- 	 <a id="logo-link" href="index.jsp">
+ 	 <a id="logo-link" href="../index.jsp">
  	  <img id="logo-img" src="../img/logo.png" alt="로고"/>
  	 </a>
  	</div>
