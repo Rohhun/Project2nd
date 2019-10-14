@@ -75,27 +75,25 @@ body{
 	position:fixed;
 	top:60px;
 	width:100%;
-	height: calc(100vh - 60px);
+	height:500px;
 	visibility:hidden;
 	z-index:10000;	
-	background-color: #000000;
-	opacity: 0.7;	
+	background-color: #000000;	
 }
 #menu-page-wrap{
 	height:500px;
 	border:1px solid #c0c0c0;
 	background-color: #fff;
-	opacity: 0.9;
 	display:flex;
 }
 /*우측사이드창 - wrap*/
 #page-besthot-wrap{
-	width:calc(43.24vw - 130px);
+	width:calc(43.24vw - 138px); /*130*/
 	min-width:318px;
 	border:1px solid #ff8040;
 }
 #page-category-wrap{
-	width:calc(56.76vw - 130px);
+	width:calc(56.76vw - 138px); /*130*/
 	min-width:418px;
 	border:1px solid #ff0080;
 }
@@ -104,6 +102,53 @@ body{
 	min-width:258px;
 	border:1px solid #0000ff;
 }
+/*우측사이드창 - besthot*/
+#page-best{
+	width:calc(43.24vw - 140px);
+	min-width:318px;
+	height:250px;
+}
+#page-best-title{
+	height:20px;
+}
+
+#page-best-list{
+	width:318px;
+	min-width:318px;
+	list-style: none;
+	display:flex;
+	height:230px;
+	overflow-x: auto;
+	overflow-y: hidden;
+	padding:0;
+	margin:0 auto;
+	-ms-overflow-style: none;
+}
+#page-best-list::-webkit-scrollbar { 
+    display: none !important; /* 윈도우 크롬 등*/
+} 
+.page-best-item{
+	height:230px; /*215*/
+	width: 298px; /*298*/
+	margin:10px;
+}
+.page-best-link{
+	height:215px; 
+	width: 298px;
+	display:inline-block;
+}
+.page-best-link img{
+	width: 298px;
+	height:auto;
+	object-fit: cover;
+}
+
+#page-hot{
+	width:calc(43.24vw - 140px);
+	min-width:318px;
+	height:250px;
+}
+
 /*우측사이드창 - profile*/
 #page-profile-wrap .profile-menu{
 	border: 1px solid black;
